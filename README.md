@@ -3,13 +3,7 @@
 Lancer les commandes suivantes :
 
 ```
-xhost +
-```
-
-Puis :
-
-```
-docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix pobsteta/computree
+docker run -ti --rm -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix pobsteta/computree
 ```
 
 Le container est lancé, se rendre dans le répertoire d'installation de computree :
