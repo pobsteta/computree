@@ -16,7 +16,9 @@ RUN  dpkg-divert --local --rename --add /sbin/initctl
 
 # Installattion des dependances
 RUN apt-get update; apt-get install -y libopencv-dev libpcl-dev libgdal-dev libgsl-dev
-#RUN apt-get install -qqy x11-apps
+RUN mkdir -p /home/run/user/1000
+
+ENV XDG_RUNTIME_DIR=/home/run/user/1000
 
 # Ajoute le repertoire computree
 ADD computree_release.tar.xz /usr/share
